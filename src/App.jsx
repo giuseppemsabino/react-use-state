@@ -1,36 +1,19 @@
-import { useState } from 'react'
-import languages from './assets/data/languages'
+// import { useState } from 'react'
+import Header from './components/Header'
+import Footer from './components/Footer';
+import Main from './components/Main'
 
 function App() {
-  const [selectedLanguage, setSelectedLanguage] = useState(languages[0]);
+ 
 
   return (
-    <div>
-      <header >
-        <h1>Web Languages</h1>
-      </header>
+    <>
+      <Header />
+      <Main />
 
-      {/* Bottoni */}
-      <div>
-        {languages.map((language) => (
-          <button
-            key={language.id}
-            onClick={() => setSelectedLanguage(language)}
-            
-          >
-            {language.title}
-          </button>
-        ))}
-      </div>
-
-       {/* Card */}
-       <div
-        
-      >
-        <h2>{selectedLanguage.title}</h2>
-        <p>{selectedLanguage.description}</p>
-      </div>
-    </div>
+      
+    
+        </>
   );
 };
   
